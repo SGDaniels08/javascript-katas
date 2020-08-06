@@ -72,3 +72,15 @@ describe("Given the number 11", ()=> {
         expect(convertNumeral(11)).toBe("XI");
     })
 })
+
+describe("Given the number 24", ()=> {
+    it("returns the numeral 'XXIV'", ()=> {
+        expect(convertNumeral(24)).toBe("XXIV");
+    })
+})
+
+describe("Given the number 55", ()=> {
+    it("returns the numeral 'LV'", ()=> {
+        expect(convertNumeral(55)).toBe("LV");
+    })
+})

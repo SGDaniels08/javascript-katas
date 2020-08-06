@@ -1,17 +1,42 @@
 const convertNumeral = (number)=> {
     let numeral = ""
     
-    if ( number % 10 === 10) { numeral += "X" }
-    else if ( number % 10 === 9) { numeral += "IX" }
-    else if ( number % 10 === 8) { numeral += "VIII" }
-    else if ( number % 10 === 7) { numeral += "VII" }
-    else if ( number % 10 === 6) { numeral += "VI" }
-    else if ( number % 10 === 5) { numeral += "V" }
-    else if ( number % 10 === 4) { numeral += "IV" }
-    else if ( number % 10 === 3) { numeral += "III" }
-    else if ( number % 10 === 2) { numeral += "II" }
-    else if (number % 10 === 1) { numeral += "I" }
-    else if ( number % 10 === 0)  { numeral += "X" }
+while (number !== 0) {    
 
+    if (number >= 50) {
+        numeral += "L"
+        number -= 50
+        continue
+    }
+    if (number >= 40) {
+        numeral += "XL"
+        number -= 40
+        continue
+    }
+    if (number >= 10) {
+        numeral += "X"
+        number -= 10  
+        continue      
+    }
+    if (number >= 9) {
+        numeral += "IX"
+        number -= 9      
+        continue
+    }
+    if (number >= 5) {
+        numeral += "V"
+        number -= 5   
+        continue   
+    }
+    if (number >= 4) { 
+        numeral += "IV"
+        number -= 4
+        continue        
+    }
+    if (number >= 1) { 
+        numeral += "I"
+        number -= 1 
+    }
+}
     return numeral
 }
